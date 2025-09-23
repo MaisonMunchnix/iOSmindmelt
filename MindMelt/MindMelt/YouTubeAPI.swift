@@ -2,7 +2,7 @@
 //  YouTubeAPI.swift
 //  MindMelt
 //
-//  Created by Kyla Enriquez on 9/22/25.
+//  Created by STUDENT on 9/23/25.
 //
 
 import Foundation

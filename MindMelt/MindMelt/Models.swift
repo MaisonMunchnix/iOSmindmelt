@@ -1,9 +1,10 @@
 //
 //  Models.swift
-//  MindMelt
+//  Watchlist
 //
-//  Created by Kyla Enriquez on 9/22/25.
+//  Created by STUDENT on 9/4/25.
 //
+
 import SwiftUI
 import Foundation
 
@@ -183,6 +184,3 @@ struct InsertWatchlistItem: Codable {
         self.youtubeId = item.youtubeID
     }
 }
-
-
-

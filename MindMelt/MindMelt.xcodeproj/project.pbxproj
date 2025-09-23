@@ -3,328 +3,141 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6916EA372E815E2100E60DEA /* YouTubeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6916EA362E815E2100E60DEA /* YouTubeAPI.swift */; };
-		697BF1C72E80FDA500B2CF5F /* MindMeltApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF1C62E80FDA500B2CF5F /* MindMeltApp.swift */; };
-		697BF1C92E80FDA500B2CF5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF1C82E80FDA500B2CF5F /* ContentView.swift */; };
-		697BF1CB2E80FDA600B2CF5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 697BF1CA2E80FDA600B2CF5F /* Assets.xcassets */; };
-		697BF1CF2E80FDA600B2CF5F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 697BF1CE2E80FDA600B2CF5F /* Preview Assets.xcassets */; };
-		697BF1D92E80FDA600B2CF5F /* MindMeltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF1D82E80FDA600B2CF5F /* MindMeltTests.swift */; };
-		697BF1E32E80FDA600B2CF5F /* MindMeltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF1E22E80FDA600B2CF5F /* MindMeltUITests.swift */; };
-		697BF1E52E80FDA600B2CF5F /* MindMeltUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF1E42E80FDA600B2CF5F /* MindMeltUITestsLaunchTests.swift */; };
-		697BF1F22E81020E00B2CF5F /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF1F12E81020E00B2CF5F /* Login.swift */; };
-		697BF1F42E81027900B2CF5F /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF1F32E81027900B2CF5F /* AddView.swift */; };
-		697BF1F62E81029500B2CF5F /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF1F52E81029500B2CF5F /* AuthView.swift */; };
-		697BF1F82E8102B700B2CF5F /* DoneWatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF1F72E8102B700B2CF5F /* DoneWatching.swift */; };
-		697BF1FA2E8102D900B2CF5F /* FilteredListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF1F92E8102D900B2CF5F /* FilteredListView.swift */; };
-		697BF1FC2E8102F200B2CF5F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF1FB2E8102F200B2CF5F /* Helper.swift */; };
-		697BF1FE2E81030E00B2CF5F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF1FD2E81030E00B2CF5F /* HomeView.swift */; };
-		697BF2002E81032D00B2CF5F /* Landing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF1FF2E81032D00B2CF5F /* Landing.swift */; };
-		697BF2022E81035100B2CF5F /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF2012E81035100B2CF5F /* Models.swift */; };
-		697BF2042E81037700B2CF5F /* RandomPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF2032E81037700B2CF5F /* RandomPickView.swift */; };
-		697BF2062E8103AD00B2CF5F /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF2052E8103AD00B2CF5F /* Reminder.swift */; };
-		697BF2082E8103E600B2CF5F /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF2072E8103E600B2CF5F /* Signup.swift */; };
-		697BF20A2E81040600B2CF5F /* SupabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF2092E81040600B2CF5F /* SupabaseManager.swift */; };
-		697BF20C2E81042A00B2CF5F /* WatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF20B2E81042A00B2CF5F /* WatchList.swift */; };
-		697BF20E2E81046500B2CF5F /* WatchlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BF20D2E81046500B2CF5F /* WatchlistManager.swift */; };
-		697BF2112E8104CE00B2CF5F /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 697BF2102E8104CE00B2CF5F /* Auth */; };
-		697BF2132E8104CE00B2CF5F /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 697BF2122E8104CE00B2CF5F /* Functions */; };
-		697BF2152E8104CE00B2CF5F /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 697BF2142E8104CE00B2CF5F /* PostgREST */; };
-		697BF2172E8104CE00B2CF5F /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 697BF2162E8104CE00B2CF5F /* Realtime */; };
-		697BF2192E8104CE00B2CF5F /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 697BF2182E8104CE00B2CF5F /* Storage */; };
-		697BF21C2E8105A300B2CF5F /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 697BF21B2E8105A300B2CF5F /* Supabase */; };
+		3F5DF17F2E7C0AA0003A9E26 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3F5DF17E2E7C0AA0003A9E26 /* Supabase */; };
+		3FE617A62E77CB9B000054AB /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 3FE617A52E77CB9B000054AB /* Auth */; };
+		3FE617A82E77CB9B000054AB /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 3FE617A72E77CB9B000054AB /* Functions */; };
+		3FE617AA2E77CB9B000054AB /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 3FE617A92E77CB9B000054AB /* PostgREST */; };
+		3FE617AC2E77CB9B000054AB /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 3FE617AB2E77CB9B000054AB /* Realtime */; };
+		3FE617AE2E77CB9B000054AB /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 3FE617AD2E77CB9B000054AB /* Storage */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		697BF1D52E80FDA600B2CF5F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 697BF1BB2E80FDA400B2CF5F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 697BF1C22E80FDA400B2CF5F;
-			remoteInfo = MindMelt;
-		};
-		697BF1DF2E80FDA600B2CF5F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 697BF1BB2E80FDA400B2CF5F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 697BF1C22E80FDA400B2CF5F;
-			remoteInfo = MindMelt;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		6916EA362E815E2100E60DEA /* YouTubeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeAPI.swift; sourceTree = "<group>"; };
-		697BF1C32E80FDA500B2CF5F /* MindMelt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindMelt.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		697BF1C62E80FDA500B2CF5F /* MindMeltApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindMeltApp.swift; sourceTree = "<group>"; };
-		697BF1C82E80FDA500B2CF5F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		697BF1CA2E80FDA600B2CF5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		697BF1CC2E80FDA600B2CF5F /* MindMelt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MindMelt.entitlements; sourceTree = "<group>"; };
-		697BF1CE2E80FDA600B2CF5F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		697BF1D42E80FDA600B2CF5F /* MindMeltTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindMeltTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		697BF1D82E80FDA600B2CF5F /* MindMeltTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindMeltTests.swift; sourceTree = "<group>"; };
-		697BF1DE2E80FDA600B2CF5F /* MindMeltUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindMeltUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		697BF1E22E80FDA600B2CF5F /* MindMeltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindMeltUITests.swift; sourceTree = "<group>"; };
-		697BF1E42E80FDA600B2CF5F /* MindMeltUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindMeltUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		697BF1F12E81020E00B2CF5F /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		697BF1F32E81027900B2CF5F /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
-		697BF1F52E81029500B2CF5F /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
-		697BF1F72E8102B700B2CF5F /* DoneWatching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneWatching.swift; sourceTree = "<group>"; };
-		697BF1F92E8102D900B2CF5F /* FilteredListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredListView.swift; sourceTree = "<group>"; };
-		697BF1FB2E8102F200B2CF5F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		697BF1FD2E81030E00B2CF5F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		697BF1FF2E81032D00B2CF5F /* Landing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landing.swift; sourceTree = "<group>"; };
-		697BF2012E81035100B2CF5F /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		697BF2032E81037700B2CF5F /* RandomPickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPickView.swift; sourceTree = "<group>"; };
-		697BF2052E8103AD00B2CF5F /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
-		697BF2072E8103E600B2CF5F /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
-		697BF2092E81040600B2CF5F /* SupabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseManager.swift; sourceTree = "<group>"; };
-		697BF20B2E81042A00B2CF5F /* WatchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchList.swift; sourceTree = "<group>"; };
-		697BF20D2E81046500B2CF5F /* WatchlistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistManager.swift; sourceTree = "<group>"; };
+		3FE617932E77CB0D000054AB /* MindMelt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindMelt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		3FE617952E77CB0D000054AB /* MindMelt */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MindMelt;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
-		697BF1C02E80FDA400B2CF5F /* Frameworks */ = {
+		3FE617902E77CB0D000054AB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				697BF2152E8104CE00B2CF5F /* PostgREST in Frameworks */,
-				697BF2132E8104CE00B2CF5F /* Functions in Frameworks */,
-				697BF21C2E8105A300B2CF5F /* Supabase in Frameworks */,
-				697BF2112E8104CE00B2CF5F /* Auth in Frameworks */,
-				697BF2192E8104CE00B2CF5F /* Storage in Frameworks */,
-				697BF2172E8104CE00B2CF5F /* Realtime in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		697BF1D12E80FDA600B2CF5F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		697BF1DB2E80FDA600B2CF5F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				3FE617AA2E77CB9B000054AB /* PostgREST in Frameworks */,
+				3FE617A82E77CB9B000054AB /* Functions in Frameworks */,
+				3F5DF17F2E7C0AA0003A9E26 /* Supabase in Frameworks */,
+				3FE617A62E77CB9B000054AB /* Auth in Frameworks */,
+				3FE617AE2E77CB9B000054AB /* Storage in Frameworks */,
+				3FE617AC2E77CB9B000054AB /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		697BF1BA2E80FDA400B2CF5F = {
-			isa = PBXGroup;
-			children = (
-				697BF1C52E80FDA500B2CF5F /* MindMelt */,
-				697BF1D72E80FDA600B2CF5F /* MindMeltTests */,
-				697BF1E12E80FDA600B2CF5F /* MindMeltUITests */,
-				697BF1C42E80FDA500B2CF5F /* Products */,
-				697BF21A2E8105A300B2CF5F /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		697BF1C42E80FDA500B2CF5F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				697BF1C32E80FDA500B2CF5F /* MindMelt.app */,
-				697BF1D42E80FDA600B2CF5F /* MindMeltTests.xctest */,
-				697BF1DE2E80FDA600B2CF5F /* MindMeltUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		697BF1C52E80FDA500B2CF5F /* MindMelt */ = {
-			isa = PBXGroup;
-			children = (
-				697BF1C62E80FDA500B2CF5F /* MindMeltApp.swift */,
-				697BF1F92E8102D900B2CF5F /* FilteredListView.swift */,
-				697BF1F32E81027900B2CF5F /* AddView.swift */,
-				697BF20D2E81046500B2CF5F /* WatchlistManager.swift */,
-				697BF2092E81040600B2CF5F /* SupabaseManager.swift */,
-				697BF1F52E81029500B2CF5F /* AuthView.swift */,
-				697BF2032E81037700B2CF5F /* RandomPickView.swift */,
-				6916EA362E815E2100E60DEA /* YouTubeAPI.swift */,
-				697BF1FF2E81032D00B2CF5F /* Landing.swift */,
-				697BF20B2E81042A00B2CF5F /* WatchList.swift */,
-				697BF2012E81035100B2CF5F /* Models.swift */,
-				697BF2072E8103E600B2CF5F /* Signup.swift */,
-				697BF1FD2E81030E00B2CF5F /* HomeView.swift */,
-				697BF2052E8103AD00B2CF5F /* Reminder.swift */,
-				697BF1F72E8102B700B2CF5F /* DoneWatching.swift */,
-				697BF1C82E80FDA500B2CF5F /* ContentView.swift */,
-				697BF1FB2E8102F200B2CF5F /* Helper.swift */,
-				697BF1CA2E80FDA600B2CF5F /* Assets.xcassets */,
-				697BF1F12E81020E00B2CF5F /* Login.swift */,
-				697BF1CC2E80FDA600B2CF5F /* MindMelt.entitlements */,
-				697BF1CD2E80FDA600B2CF5F /* Preview Content */,
-			);
-			path = MindMelt;
-			sourceTree = "<group>";
-		};
-		697BF1CD2E80FDA600B2CF5F /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				697BF1CE2E80FDA600B2CF5F /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		697BF1D72E80FDA600B2CF5F /* MindMeltTests */ = {
-			isa = PBXGroup;
-			children = (
-				697BF1D82E80FDA600B2CF5F /* MindMeltTests.swift */,
-			);
-			path = MindMeltTests;
-			sourceTree = "<group>";
-		};
-		697BF1E12E80FDA600B2CF5F /* MindMeltUITests */ = {
-			isa = PBXGroup;
-			children = (
-				697BF1E22E80FDA600B2CF5F /* MindMeltUITests.swift */,
-				697BF1E42E80FDA600B2CF5F /* MindMeltUITestsLaunchTests.swift */,
-			);
-			path = MindMeltUITests;
-			sourceTree = "<group>";
-		};
-		697BF21A2E8105A300B2CF5F /* Frameworks */ = {
+		3F5DF17D2E7C0AA0003A9E26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3FE6178A2E77CB0D000054AB = {
+			isa = PBXGroup;
+			children = (
+				3FE617952E77CB0D000054AB /* MindMelt */,
+				3F5DF17D2E7C0AA0003A9E26 /* Frameworks */,
+				3FE617942E77CB0D000054AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FE617942E77CB0D000054AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FE617932E77CB0D000054AB /* MindMelt.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		697BF1C22E80FDA400B2CF5F /* MindMelt */ = {
+		3FE617922E77CB0D000054AB /* MindMelt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 697BF1E82E80FDA600B2CF5F /* Build configuration list for PBXNativeTarget "MindMelt" */;
+			buildConfigurationList = 3FE617A12E77CB0E000054AB /* Build configuration list for PBXNativeTarget "MindMelt" */;
 			buildPhases = (
-				697BF1BF2E80FDA400B2CF5F /* Sources */,
-				697BF1C02E80FDA400B2CF5F /* Frameworks */,
-				697BF1C12E80FDA400B2CF5F /* Resources */,
+				3FE6178F2E77CB0D000054AB /* Sources */,
+				3FE617902E77CB0D000054AB /* Frameworks */,
+				3FE617912E77CB0D000054AB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				3FE617952E77CB0D000054AB /* MindMelt */,
 			);
 			name = MindMelt;
 			packageProductDependencies = (
-				697BF2102E8104CE00B2CF5F /* Auth */,
-				697BF2122E8104CE00B2CF5F /* Functions */,
-				697BF2142E8104CE00B2CF5F /* PostgREST */,
-				697BF2162E8104CE00B2CF5F /* Realtime */,
-				697BF2182E8104CE00B2CF5F /* Storage */,
-				697BF21B2E8105A300B2CF5F /* Supabase */,
+				3FE617A52E77CB9B000054AB /* Auth */,
+				3FE617A72E77CB9B000054AB /* Functions */,
+				3FE617A92E77CB9B000054AB /* PostgREST */,
+				3FE617AB2E77CB9B000054AB /* Realtime */,
+				3FE617AD2E77CB9B000054AB /* Storage */,
+				3F5DF17E2E7C0AA0003A9E26 /* Supabase */,
 			);
 			productName = MindMelt;
-			productReference = 697BF1C32E80FDA500B2CF5F /* MindMelt.app */;
+			productReference = 3FE617932E77CB0D000054AB /* MindMelt.app */;
 			productType = "com.apple.product-type.application";
-		};
-		697BF1D32E80FDA600B2CF5F /* MindMeltTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 697BF1EB2E80FDA600B2CF5F /* Build configuration list for PBXNativeTarget "MindMeltTests" */;
-			buildPhases = (
-				697BF1D02E80FDA600B2CF5F /* Sources */,
-				697BF1D12E80FDA600B2CF5F /* Frameworks */,
-				697BF1D22E80FDA600B2CF5F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				697BF1D62E80FDA600B2CF5F /* PBXTargetDependency */,
-			);
-			name = MindMeltTests;
-			productName = MindMeltTests;
-			productReference = 697BF1D42E80FDA600B2CF5F /* MindMeltTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		697BF1DD2E80FDA600B2CF5F /* MindMeltUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 697BF1EE2E80FDA600B2CF5F /* Build configuration list for PBXNativeTarget "MindMeltUITests" */;
-			buildPhases = (
-				697BF1DA2E80FDA600B2CF5F /* Sources */,
-				697BF1DB2E80FDA600B2CF5F /* Frameworks */,
-				697BF1DC2E80FDA600B2CF5F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				697BF1E02E80FDA600B2CF5F /* PBXTargetDependency */,
-			);
-			name = MindMeltUITests;
-			productName = MindMeltUITests;
-			productReference = 697BF1DE2E80FDA600B2CF5F /* MindMeltUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		697BF1BB2E80FDA400B2CF5F /* Project object */ = {
+		3FE6178B2E77CB0D000054AB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					697BF1C22E80FDA400B2CF5F = {
-						CreatedOnToolsVersion = 15.4;
-					};
-					697BF1D32E80FDA600B2CF5F = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 697BF1C22E80FDA400B2CF5F;
-					};
-					697BF1DD2E80FDA600B2CF5F = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 697BF1C22E80FDA400B2CF5F;
+					3FE617922E77CB0D000054AB = {
+						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
-			buildConfigurationList = 697BF1BE2E80FDA400B2CF5F /* Build configuration list for PBXProject "MindMelt" */;
-			compatibilityVersion = "Xcode 14.0";
+			buildConfigurationList = 3FE6178E2E77CB0D000054AB /* Build configuration list for PBXProject "MindMelt" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 697BF1BA2E80FDA400B2CF5F;
+			mainGroup = 3FE6178A2E77CB0D000054AB;
+			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				697BF20F2E8104CE00B2CF5F /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				3FE617A42E77CB9B000054AB /* XCRemoteSwiftPackageReference "supabase-swift" */,
 			);
-			productRefGroup = 697BF1C42E80FDA500B2CF5F /* Products */;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 3FE617942E77CB0D000054AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				697BF1C22E80FDA400B2CF5F /* MindMelt */,
-				697BF1D32E80FDA600B2CF5F /* MindMeltTests */,
-				697BF1DD2E80FDA600B2CF5F /* MindMeltUITests */,
+				3FE617922E77CB0D000054AB /* MindMelt */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		697BF1C12E80FDA400B2CF5F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				697BF1CF2E80FDA600B2CF5F /* Preview Assets.xcassets in Resources */,
-				697BF1CB2E80FDA600B2CF5F /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		697BF1D22E80FDA600B2CF5F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		697BF1DC2E80FDA600B2CF5F /* Resources */ = {
+		3FE617912E77CB0D000054AB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -334,65 +147,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		697BF1BF2E80FDA400B2CF5F /* Sources */ = {
+		3FE6178F2E77CB0D000054AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				697BF20A2E81040600B2CF5F /* SupabaseManager.swift in Sources */,
-				697BF2022E81035100B2CF5F /* Models.swift in Sources */,
-				697BF1FE2E81030E00B2CF5F /* HomeView.swift in Sources */,
-				697BF20E2E81046500B2CF5F /* WatchlistManager.swift in Sources */,
-				697BF2002E81032D00B2CF5F /* Landing.swift in Sources */,
-				697BF1F82E8102B700B2CF5F /* DoneWatching.swift in Sources */,
-				697BF1F42E81027900B2CF5F /* AddView.swift in Sources */,
-				697BF1F62E81029500B2CF5F /* AuthView.swift in Sources */,
-				697BF2042E81037700B2CF5F /* RandomPickView.swift in Sources */,
-				697BF2082E8103E600B2CF5F /* Signup.swift in Sources */,
-				697BF1FA2E8102D900B2CF5F /* FilteredListView.swift in Sources */,
-				697BF1F22E81020E00B2CF5F /* Login.swift in Sources */,
-				697BF2062E8103AD00B2CF5F /* Reminder.swift in Sources */,
-				697BF1C92E80FDA500B2CF5F /* ContentView.swift in Sources */,
-				697BF20C2E81042A00B2CF5F /* WatchList.swift in Sources */,
-				697BF1C72E80FDA500B2CF5F /* MindMeltApp.swift in Sources */,
-				6916EA372E815E2100E60DEA /* YouTubeAPI.swift in Sources */,
-				697BF1FC2E8102F200B2CF5F /* Helper.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		697BF1D02E80FDA600B2CF5F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				697BF1D92E80FDA600B2CF5F /* MindMeltTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		697BF1DA2E80FDA600B2CF5F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				697BF1E52E80FDA600B2CF5F /* MindMeltUITestsLaunchTests.swift in Sources */,
-				697BF1E32E80FDA600B2CF5F /* MindMeltUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		697BF1D62E80FDA600B2CF5F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 697BF1C22E80FDA400B2CF5F /* MindMelt */;
-			targetProxy = 697BF1D52E80FDA600B2CF5F /* PBXContainerItemProxy */;
-		};
-		697BF1E02E80FDA600B2CF5F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 697BF1C22E80FDA400B2CF5F /* MindMelt */;
-			targetProxy = 697BF1DF2E80FDA600B2CF5F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		697BF1E62E80FDA600B2CF5F /* Debug */ = {
+		3FE6179F2E77CB0E000054AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -444,16 +209,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		697BF1E72E80FDA600B2CF5F /* Release */ = {
+		3FE617A02E77CB0E000054AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -499,206 +266,89 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		697BF1E92E80FDA600B2CF5F /* Debug */ = {
+		3FE617A22E77CB0E000054AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = MindMelt/MindMelt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MindMelt/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Nicole.MindMelt;
+				PRODUCT_BUNDLE_IDENTIFIER = mseuf.edu.ph.MindMelt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		697BF1EA2E80FDA600B2CF5F /* Release */ = {
+		3FE617A32E77CB0E000054AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = MindMelt/MindMelt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MindMelt/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Nicole.MindMelt;
+				PRODUCT_BUNDLE_IDENTIFIER = mseuf.edu.ph.MindMelt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		697BF1EC2E80FDA600B2CF5F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Nicole.MindMeltTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindMelt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MindMelt";
-			};
-			name = Debug;
-		};
-		697BF1ED2E80FDA600B2CF5F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Nicole.MindMeltTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindMelt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MindMelt";
-			};
-			name = Release;
-		};
-		697BF1EF2E80FDA600B2CF5F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Nicole.MindMeltUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MindMelt;
-			};
-			name = Debug;
-		};
-		697BF1F02E80FDA600B2CF5F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Nicole.MindMeltUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MindMelt;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		697BF1BE2E80FDA400B2CF5F /* Build configuration list for PBXProject "MindMelt" */ = {
+		3FE6178E2E77CB0D000054AB /* Build configuration list for PBXProject "MindMelt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				697BF1E62E80FDA600B2CF5F /* Debug */,
-				697BF1E72E80FDA600B2CF5F /* Release */,
+				3FE6179F2E77CB0E000054AB /* Debug */,
+				3FE617A02E77CB0E000054AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		697BF1E82E80FDA600B2CF5F /* Build configuration list for PBXNativeTarget "MindMelt" */ = {
+		3FE617A12E77CB0E000054AB /* Build configuration list for PBXNativeTarget "MindMelt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				697BF1E92E80FDA600B2CF5F /* Debug */,
-				697BF1EA2E80FDA600B2CF5F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		697BF1EB2E80FDA600B2CF5F /* Build configuration list for PBXNativeTarget "MindMeltTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				697BF1EC2E80FDA600B2CF5F /* Debug */,
-				697BF1ED2E80FDA600B2CF5F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		697BF1EE2E80FDA600B2CF5F /* Build configuration list for PBXNativeTarget "MindMeltUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				697BF1EF2E80FDA600B2CF5F /* Debug */,
-				697BF1F02E80FDA600B2CF5F /* Release */,
+				3FE617A22E77CB0E000054AB /* Debug */,
+				3FE617A32E77CB0E000054AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -706,7 +356,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		697BF20F2E8104CE00B2CF5F /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+		3FE617A42E77CB9B000054AB /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/supabase-community/supabase-swift.git";
 			requirement = {
@@ -717,37 +367,37 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		697BF2102E8104CE00B2CF5F /* Auth */ = {
+		3F5DF17E2E7C0AA0003A9E26 /* Supabase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 697BF20F2E8104CE00B2CF5F /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = 3FE617A42E77CB9B000054AB /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		3FE617A52E77CB9B000054AB /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FE617A42E77CB9B000054AB /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Auth;
 		};
-		697BF2122E8104CE00B2CF5F /* Functions */ = {
+		3FE617A72E77CB9B000054AB /* Functions */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 697BF20F2E8104CE00B2CF5F /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = 3FE617A42E77CB9B000054AB /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Functions;
 		};
-		697BF2142E8104CE00B2CF5F /* PostgREST */ = {
+		3FE617A92E77CB9B000054AB /* PostgREST */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 697BF20F2E8104CE00B2CF5F /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = 3FE617A42E77CB9B000054AB /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = PostgREST;
 		};
-		697BF2162E8104CE00B2CF5F /* Realtime */ = {
+		3FE617AB2E77CB9B000054AB /* Realtime */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 697BF20F2E8104CE00B2CF5F /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = 3FE617A42E77CB9B000054AB /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Realtime;
 		};
-		697BF2182E8104CE00B2CF5F /* Storage */ = {
+		3FE617AD2E77CB9B000054AB /* Storage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 697BF20F2E8104CE00B2CF5F /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = 3FE617A42E77CB9B000054AB /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Storage;
-		};
-		697BF21B2E8105A300B2CF5F /* Supabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 697BF20F2E8104CE00B2CF5F /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = Supabase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 697BF1BB2E80FDA400B2CF5F /* Project object */;
+	rootObject = 3FE6178B2E77CB0D000054AB /* Project object */;
 }

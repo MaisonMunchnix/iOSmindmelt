@@ -1,8 +1,8 @@
 //
 //  Landing.swift
-//  MindMelt
+//  Watchlist
 //
-//  Created by Kyla Enriquez on 9/22/25.
+//  Created by STUDENT on 9/2/25.
 //
 
 import Foundation
@@ -14,6 +14,8 @@ struct Landing: View {
     var body: some View{
         
         ZStack{
+            
+            
             TabView{
                 HomeView()
                     .tabItem{
@@ -35,12 +37,20 @@ struct Landing: View {
             }
             .environmentObject(watchlistManager)
             .onAppear {
-                if SupabaseManager.shared.isAuthenticated {
-                    Task {
-                        await SupabaseManager.shared.watchlistManager?.syncWithSupabase()
-                    }
+                watchlistManager.debugAuthStatus()
+                
+                Task {
+                    await watchlistManager.syncWithSupabase()
                 }
-            }            .accentColor(.red)
+            }
+//            .onAppear {
+//                if SupabaseManager.shared.isAuthenticated {
+//                    Task {
+//                        await SupabaseManager.shared.watchlistManager?.syncWithSupabase()
+//                    }
+//                }
+//            }
+            .accentColor(.red)
         }
     }
 }

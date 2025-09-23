@@ -1,8 +1,8 @@
 //
 //  HomeView.swift
-//  MindMelt
+//  Watchlist
 //
-//  Created by Kyla Enriquez on 9/22/25.
+//  Created by STUDENT on 9/2/25.
 //
 
 import Foundation
@@ -19,6 +19,18 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 20) {
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        print("Button tapped")
+                    }) {
+                        Image(systemName: "rectangle.portrait.and.arrow.right")
+                            .padding(.horizontal)
+                    }
+                }
+
+                Spacer()
+                
                 Text("Ready to watch something?")
                     .foregroundColor(.black)
                     .font(.system(size: 18, weight: .bold, design: .default))
@@ -90,6 +102,8 @@ struct HomeView: View {
                 ) {
                     EmptyView()
                 }
+                
+                Spacer()
             }
         }
     }

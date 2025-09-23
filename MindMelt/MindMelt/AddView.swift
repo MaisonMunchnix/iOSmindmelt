@@ -1,8 +1,8 @@
 //
 //  AddView.swift
-//  MindMelt
+//  Watchlist
 //
-//  Created by Kyla Enriquez on 9/22/25.
+//  Created by STUDENT on 9/2/25.
 //
 import Foundation
 import SwiftUI
@@ -15,6 +15,8 @@ struct AddView: View {
     @State var detectedYoutubeId: String?
     @State var isAutoFilled = false
     @State var thumbnailURL: String?
+    
+    @State var reminderDate: Date = Date()
     
     @EnvironmentObject var watchlistManager : WatchlistManager
     @Environment(\.dismiss) private var dismiss
@@ -68,10 +70,10 @@ struct AddView: View {
                                 .foregroundColor(.black)
                                 .fontWeight(.semibold)
                             
-                            TextField("  Paste content link or enter title ", text: $title)
+                            TextField("  Enter title ", text: $title)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .cornerRadius(13)
-                                .frame(height: 70)
+                                .frame(height: 70).autocorrectionDisabled(true)
                         }
                         .padding(.horizontal)
                         
@@ -111,9 +113,26 @@ struct AddView: View {
                             TextField("  Add any notes..", text: $notes, axis: .vertical)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .lineLimit(3, reservesSpace: true)
-                                .cornerRadius(13)
+                                .cornerRadius(13).autocorrectionDisabled(true) //
                         }
                         .padding(.horizontal)
+                        
+                        
+                        
+                        VStack(alignment: .leading, spacing: 8){
+                            Text("Set Reminder")
+                                .foregroundColor(.black)
+                                .fontWeight(.semibold)
+                            
+                            HStack{
+                                DatePicker("Date and Time", selection: $reminderDate, displayedComponents: [.date, .hourAndMinute])
+                                    .padding()
+
+                                
+                                Spacer()
+                            }
+                        }.padding(.horizontal)
+                        
                         
                         HStack(spacing: 20) {
                             Button(action: saveItem) {
@@ -151,7 +170,7 @@ struct AddView: View {
 
     private func checkForYTurl() {
         if let vidID = Helper.checkClipboardforYT() {
-            print("📋 Extracted video ID: \(vidID)")
+            print("Extracted video ID: \(vidID)")
 
             detectedYoutubeId = vidID
             selectedType = .youtubeVideo
@@ -173,7 +192,7 @@ struct AddView: View {
                 }
             }
         } else {
-            print("❌ No YouTube link found in clipboard.")
+            print("No YouTube link found in clipboard.")
         }
     }
 
@@ -214,5 +233,3 @@ struct AddView: View {
 #Preview {
     AddView()
 }
-
- 

@@ -2,16 +2,20 @@
 //  MindMeltApp.swift
 //  MindMelt
 //
-//  Created by Kyla Enriquez on 9/22/25.
+//  Created by STUDENT on 9/15/25.
 //
 
 import SwiftUI
 
 @main
-struct MindMeltApp: App {
+struct MindMelt: App {
+    @StateObject private var watchlistManager = WatchlistManager()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(watchlistManager)
         }
     }
 }
+

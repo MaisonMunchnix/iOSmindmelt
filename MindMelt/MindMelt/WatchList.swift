@@ -1,15 +1,11 @@
 //
 //  WatchList.swift
-//  MindMelt
+//  Watchlist
 //
-//  Created by Kyla Enriquez on 9/22/25.
+//  Created by STUDENT on 9/2/25.
 //
-//
-//  WatchList.swift
-//  MindMelt
-//
-//  Created by Kyla Enriquez on 9/22/25.
-//
+
+
 
 import Foundation
 import SwiftUI
@@ -335,7 +331,7 @@ struct DetailRow: View {
         VStack(alignment: .leading, spacing: 5) {
             Text(title)
                 .font(.headline)
-                .foregroundColor(.black)	
+                .foregroundColor(.black)
             
             Text(value)
                 .font(.body)

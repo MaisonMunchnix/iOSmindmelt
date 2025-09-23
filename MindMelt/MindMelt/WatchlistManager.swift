@@ -2,7 +2,7 @@
 //  WatchlistManager.swift
 //  MindMelt
 //
-//  Created by Kyla Enriquez on 9/22/25.
+//  Created by STUDENT on 9/4/25.
 //
 
 
@@ -20,16 +20,17 @@ class WatchlistManager: ObservableObject {
     
     init() {
         loadItems()
+        
+        Task{
+            await autoSyncOnStartup()
+        }
     }
     
-    // MARK: - Core Functions (Updated for Supabase)
-    
+    // MARK: - Core 
     func addItem(_ item: WatchlistItem) {
-        // Add locally first for immediate UI update
         items.append(item)
         saveItems()
         
-        // Sync to Supabase if user is authenticated
         Task {
             await syncItemToSupabase(item)
         }
@@ -57,7 +58,7 @@ class WatchlistManager: ObservableObject {
         }
     }
     
-    // MARK: - Filter Functions (Unchanged)
+    // MARK: - Filter
     
     func getQuickItems() -> [WatchlistItem] {
         return items.filter { $0.category == .quick && !$0.isWatched }
@@ -91,7 +92,14 @@ class WatchlistManager: ObservableObject {
         }
     }
     
-    // MARK: - Supabase Sync Functions
+    @MainActor
+    private func autoSyncOnStartup() async {
+        if supabase.isAuthenticated {
+            print("Syncing supaabase...")
+            await syncWithSupabase()
+        }
+    }
+    // MARK: - Supabase sync
     
     @MainActor
     func syncWithSupabase() async {
@@ -104,7 +112,6 @@ class WatchlistManager: ObservableObject {
         errorMessage = nil
         
         do {
-            // Fetch all items from Supabase
             let response: [SupabaseWatchlistItem] = try await supabase.client
                 .from("watchlist_items")
                 .select()
@@ -112,29 +119,27 @@ class WatchlistManager: ObservableObject {
                 .execute()
                 .value
             
-            // Convert to WatchlistItem and update local storage
             let supabaseItems = response.map { $0.toWatchlistItem() }
             
-            // Merge with local items (prioritize Supabase data)
-            var mergedItems: [WatchlistItem] = []
-//            let localItemIds = Set(items.map { $0.id })
-            let supabaseItemIds = Set(supabaseItems.map { $0.id })
-            
-            // Add all Supabase items
-            mergedItems.append(contentsOf: supabaseItems)
-            
-            // Add local items that don't exist in Supabase
-            let localOnlyItems = items.filter { !supabaseItemIds.contains($0.id) }
-            mergedItems.append(contentsOf: localOnlyItems)
-            
-            // Update local storage
-            items = mergedItems
+            items = supabaseItems
             saveItems()
             
-            // Upload local-only items to Supabase
-            for localItem in localOnlyItems {
-                await syncItemToSupabase(localItem)
-            }
+            print("Sync completed. \(supabaseItems.count)")
+            
+//            var mergedItems: [WatchlistItem] = []
+//            let supabaseItemIds = Set(supabaseItems.map { $0.id })
+//            
+//            mergedItems.append(contentsOf: supabaseItems)
+//            
+//            let localOnlyItems = items.filter { !supabaseItemIds.contains($0.id) }
+//            mergedItems.append(contentsOf: localOnlyItems)
+//            
+//            items = mergedItems
+//            saveItems()
+//            
+//            for localItem in localOnlyItems {
+//                await syncItemToSupabase(localItem)
+//            }
             
             print("Sync completed successfully")
             
@@ -154,7 +159,6 @@ class WatchlistManager: ObservableObject {
         do {
             let insertItem = InsertWatchlistItem(from: item, userId: user.id)
             
-            // Remove the unused variable assignment
             try await supabase.client
                 .from("watchlist_items")
                 .insert(insertItem)
@@ -229,17 +233,22 @@ class WatchlistManager: ObservableObject {
         }
     }
     
-    // MARK: - Auth State Handling
     
     func handleAuthStateChange() {
         if supabase.isAuthenticated {
-            // User just logged in - sync data
             Task {
                 await syncWithSupabase()
             }
         } else {
-            // User logged out - keep local data but don't sync
             print("User logged out, keeping local data")
         }
+    }
+    
+    func debugAuthStatus() {
+        print("=== DEBUG AUTH STATUS ===")
+        print("Is authenticated: \(supabase.isAuthenticated)")
+        print("User ID: \(supabase.user?.id.uuidString ?? "nil")")
+        print("Local items count: \(items.count)")
+        print("========================")
     }
 }

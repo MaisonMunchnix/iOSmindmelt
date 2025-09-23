@@ -1,9 +1,10 @@
 //
 //  SupabaseManager.swift
-//  MindMelt
+//  Watchlist
 //
-//  Created by Kyla Enriquez on 9/22/25.
+//  Created by STUDENT on 9/15/25.
 //
+
 
 import Foundation
 
@@ -100,14 +101,11 @@ class SupabaseManager: ObservableObject {
                 .from(bucketName)
                 .upload(path: filePath, file: imageData)
             
-            // Get the public URL after the file is uploaded using `getPublicURL` method
             let fileUrl = try client.storage
                 .from(bucketName)
                 .getPublicURL(path: filePath)
             
-            // The fileUrl is now a non-optional URL
-            // Assume `fileUrl` is already a non-optional URL
-            let urlString = fileUrl.absoluteString // Access the property directly
+            let urlString = fileUrl.absoluteString
             return urlString
             
             

@@ -1,8 +1,8 @@
 //
 //  DoneWatching.swift
-//  MindMelt
+//  Watchlist
 //
-//  Created by Kyla Enriquez on 9/22/25.
+//  Created by STUDENT on 9/2/25.
 //
 import SwiftUI
 
