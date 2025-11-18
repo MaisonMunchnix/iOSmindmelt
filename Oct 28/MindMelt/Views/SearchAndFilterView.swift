@@ -103,22 +103,23 @@ struct SearchAndFilterView: View {
                 // Search Bar
                 HStack {
                     Image(systemName: "magnifyingglass")
-                        .foregroundColor(.gray)
+                        .foregroundColor(themeManager.secondaryTextColor)
                     
                     TextField("Search titles or notes...", text: $searchText)
                         .textFieldStyle(PlainTextFieldStyle())
+                        .foregroundColor(themeManager.primaryTextColor)
                     
                     if !searchText.isEmpty {
                         Button(action: {
                             searchText = ""
                         }) {
                             Image(systemName: "xmark.circle.fill")
-                                .foregroundColor(.gray)
+                                .foregroundColor(themeManager.secondaryTextColor)
                         }
                     }
                 }
                 .padding()
-                .background(Color.gray.opacity(0.1))
+                .background(themeManager.searchBarBackground)
                 .cornerRadius(12)
                 .padding(.horizontal)
                 .padding(.top)
@@ -258,7 +259,7 @@ struct SearchAndFilterView: View {
                                     }
                                     
                                     Text("•")
-                                        .foregroundColor(.gray)
+                                        .foregroundColor(themeManager.secondaryTextColor)
                                     
                                     Text("\(selectedItems.count) selected")
                                         .font(.caption)
@@ -325,7 +326,8 @@ struct SearchAndFilterView: View {
                     Spacer()
                     
                     NavigationLink(destination: AddView()
-                        .environmentObject(watchlistManager), isActive: $showAdd) {
+                        .environmentObject(watchlistManager)
+                        .environmentObject(themeManager), isActive: $showAdd) {
                         Image(systemName: "plus")
                             .foregroundColor(.white)
                             .font(.title2)
@@ -414,10 +416,10 @@ struct FilterPill: View {
                 .font(.caption)
                 .fontWeight(.medium)
         }
-        .foregroundColor(isActive ? .red : .gray)
+        .foregroundColor(isActive ? .red : themeManager.secondaryTextColor)
         .padding(.horizontal, 12)
         .padding(.vertical, 8)
-        .background(isActive ? Color.red.opacity(0.1) : Color.gray.opacity(0.1))
+        .background(isActive ? Color.red.opacity(0.1) : themeManager.secondaryBackgroundColor)
         .cornerRadius(20)
         .overlay(
             RoundedRectangle(cornerRadius: 20)
@@ -564,7 +566,7 @@ struct EmptySearchState: View {
             
             Image(systemName: "magnifyingglass")
                 .font(.system(size: 60))
-                .foregroundColor(.gray)
+                .foregroundColor(themeManager.secondaryTextColor)
             
             if searchText.isEmpty {
                 Text("Start searching")

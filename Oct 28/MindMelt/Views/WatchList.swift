@@ -13,6 +13,7 @@ import SwiftUI
 struct WatchList: View {
     @State var showAdd = false
     @EnvironmentObject var watchlistManager: WatchlistManager
+    @EnvironmentObject var themeManager: ThemeManager
     
     var unwatchedItems: [WatchlistItem] {
         watchlistManager.items.filter { !$0.isWatched }
@@ -21,6 +22,7 @@ struct WatchList: View {
     var body: some View {
         NavigationStack {
             ZStack {
+                themeManager.backgroundColor.ignoresSafeArea()
                 
                 VStack {
                     // Header
@@ -32,7 +34,7 @@ struct WatchList: View {
                                 .frame(width: 30, height: 30)
                             
                             Text("Watch List")
-                                .foregroundColor(.black)
+                                .foregroundColor(themeManager.primaryTextColor)
                                 .fontWeight(.bold)
                         }
                         .padding()
@@ -44,7 +46,7 @@ struct WatchList: View {
                     
                     Divider()
                         .frame(height: 1)
-                        .foregroundColor(.white)
+                        .foregroundColor(themeManager.borderColor)
                     
                     // Content Area
                     if unwatchedItems.isEmpty {
@@ -53,11 +55,11 @@ struct WatchList: View {
                             Spacer()
                             
                             Text("Your watchlist is empty")
-                                .foregroundColor(.black)
+                                .foregroundColor(themeManager.primaryTextColor)
                                 .font(.headline)
                             
                             Text("Add some content to get started!")
-                                .foregroundColor(.gray)
+                                .foregroundColor(themeManager.secondaryTextColor)
                                 .font(.caption)
                             
                             Spacer()
@@ -96,7 +98,8 @@ struct WatchList: View {
                                     .cornerRadius(100)
                             })
                             
-                            NavigationLink(destination: AddView(), isActive: $showAdd) {
+                            NavigationLink(destination: AddView()
+                                .environmentObject(themeManager), isActive: $showAdd) {
                                 EmptyView()
                             }
                         }
@@ -112,6 +115,7 @@ struct WatchList: View {
 struct WatchlistItemRow: View {
     let item: WatchlistItem
     @EnvironmentObject var watchlistManager: WatchlistManager
+    @EnvironmentObject var themeManager: ThemeManager
     
     var body: some View {
         HStack {
@@ -134,16 +138,16 @@ struct WatchlistItemRow: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(item.title)
                     .font(.system(size: 15))
-                    .foregroundColor(.black)
+                    .foregroundColor(themeManager.primaryTextColor)
                     .lineLimit(2)
                 
                 HStack {
                     Text(item.type.rawValue)
                         .font(.caption)
-                        .foregroundColor(.gray)
+                        .foregroundColor(themeManager.secondaryTextColor)
                     
                     Text("•")
-                        .foregroundColor(.gray)
+                        .foregroundColor(themeManager.secondaryTextColor)
                     
                     Text(item.category.rawValue)
                         .font(.caption)
@@ -153,7 +157,7 @@ struct WatchlistItemRow: View {
                 if !item.notes.isEmpty {
                     Text(item.notes)
                         .font(.caption2)
-                        .foregroundColor(.gray)
+                        .foregroundColor(themeManager.secondaryTextColor)
                         .lineLimit(1)
                 }
             }
@@ -169,7 +173,7 @@ struct WatchlistItemRow: View {
             }
         }
         .padding()
-        .background(Color.gray.opacity(0.1))
+        .background(themeManager.cardBackgroundColor)
         .cornerRadius(10)
     }
 }
@@ -179,12 +183,13 @@ struct WatchlistItemRow: View {
 struct WatchlistItemDetailView: View {
     let item: WatchlistItem
     @EnvironmentObject var watchlistManager: WatchlistManager
+    @EnvironmentObject var themeManager: ThemeManager
     @Environment(\.dismiss) private var dismiss
     @State private var showingDeleteAlert = false
     
     var body: some View {
         ZStack {
-            Color.white.ignoresSafeArea()
+            themeManager.backgroundColor.ignoresSafeArea()
             
             
             ScrollView {
@@ -217,17 +222,17 @@ struct WatchlistItemDetailView: View {
                             Text(item.title)
                                 .font(.system(size: 20))
                                 .fontWeight(.bold)
-                                .foregroundColor(.black)
+                                .foregroundColor(themeManager.primaryTextColor)
                                 .multilineTextAlignment(.leading)
                                 .padding(.horizontal)
                             
                             HStack {
                                 Text(item.type.rawValue)
                                     .font(.subheadline)
-                                    .foregroundColor(.gray)
+                                    .foregroundColor(themeManager.secondaryTextColor)
                                 
                                 Text("•")
-                                    .foregroundColor(.gray)
+                                    .foregroundColor(themeManager.secondaryTextColor)
                                 
                                 Text(item.category.rawValue)
                                     .font(.subheadline)
@@ -253,13 +258,13 @@ struct WatchlistItemDetailView: View {
                             VStack(alignment: .leading, spacing: 5) {
                                 Text("Notes")
                                     .font(.headline)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(themeManager.primaryTextColor)
                                 
                                 Text(item.notes)
                                     .font(.body)
-                                    .foregroundColor(.gray)
+                                    .foregroundColor(themeManager.secondaryTextColor)
                                     .padding()
-                                    .background(Color.gray.opacity(0.1))
+                                    .background(themeManager.secondaryBackgroundColor)
                                     .cornerRadius(8)
                             }
                         }
@@ -332,16 +337,17 @@ struct WatchlistItemDetailView: View {
 struct DetailRow: View {
     let title: String
     let value: String
+    @EnvironmentObject var themeManager: ThemeManager
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             Text(title)
                 .font(.headline)
-                .foregroundColor(.black)
+                .foregroundColor(themeManager.primaryTextColor)
             
             Text(value)
                 .font(.body)
-                .foregroundColor(.gray)
+                .foregroundColor(themeManager.secondaryTextColor)
         }
     }
 }

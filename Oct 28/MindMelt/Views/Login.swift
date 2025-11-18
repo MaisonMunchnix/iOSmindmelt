@@ -11,6 +11,7 @@ import SwiftUI
 
 struct Login: View {
     @StateObject private var supabase = SupabaseManager.shared
+    @EnvironmentObject var themeManager: ThemeManager
     @State private var email = ""
     @State private var password = ""
     @State private var isSignUp = false
@@ -24,12 +25,13 @@ struct Login: View {
     var body: some View {
         
         ZStack{
+            themeManager.backgroundColor.ignoresSafeArea()
             
             VStack{
                 VStack{
                     Text("M I N D  M E L T")
                         .font(.system(size: 20, weight: .semibold))
-                        .foregroundColor(.white)
+                        .foregroundColor(themeManager.primaryTextColor)
                     
                     Image("mm")
                         .resizable()

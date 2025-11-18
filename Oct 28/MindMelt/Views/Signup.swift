@@ -16,15 +16,16 @@ struct Signup: View {
     @State var email: String = ""
     @State var password: String = ""
     @State var confirmPw: String = ""
+    @EnvironmentObject var themeManager: ThemeManager
     
     var body: some View {
         
         ZStack{
-            Color.black.ignoresSafeArea()
+            themeManager.backgroundColor.ignoresSafeArea()
             VStack{
                 Text("M I N D  M E L T")
                     .font(.system(size: 15, weight: .semibold))
-                    .foregroundColor(.white)
+                    .foregroundColor(themeManager.primaryTextColor)
                 
                 Image("mm")
                     .resizable()

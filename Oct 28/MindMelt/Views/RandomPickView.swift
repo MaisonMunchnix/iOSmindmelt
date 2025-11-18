@@ -7,6 +7,7 @@ import SwiftUI
 
 struct RandomPickView: View {
     @EnvironmentObject var watchlistManager: WatchlistManager
+    @EnvironmentObject var themeManager: ThemeManager
     @Environment(\.dismiss) private var dismiss
     
     @State private var recommendation: (item: WatchlistItem?, reason: String?) = (nil, nil)
@@ -26,7 +27,7 @@ struct RandomPickView: View {
             }
         } else {
             ZStack {
-                Color.white.ignoresSafeArea()
+                themeManager.backgroundColor.ignoresSafeArea()
                 
                 VStack(spacing: 30) {
                     if isLoading {
@@ -49,7 +50,7 @@ struct RandomPickView: View {
                             .onAppear { isAnimating = true }
                             
                             Text("🤖 AI is analyzing...")
-                                .foregroundColor(.black)
+                                .foregroundColor(themeManager.primaryTextColor)
                                 .font(.headline)
                             
                             VStack(spacing: 8) {
@@ -57,7 +58,7 @@ struct RandomPickView: View {
                                 Text("• Considering time of day")
                                 Text("• Finding the perfect match")
                             }
-                            .foregroundColor(.gray)
+                            .foregroundColor(themeManager.secondaryTextColor)
                             .font(.caption)
                         }
                         
@@ -69,7 +70,7 @@ struct RandomPickView: View {
                                     .font(.system(size: 60))
                                 
                                 Text("AI Recommends")
-                                    .foregroundColor(.gray)
+                                    .foregroundColor(themeManager.secondaryTextColor)
                                     .font(.headline)
                                 
                                 // Item card
@@ -81,16 +82,16 @@ struct RandomPickView: View {
                                         
                                         VStack(alignment: .leading) {
                                             Text(item.title)
-                                                .foregroundColor(.black)
+                                                .foregroundColor(themeManager.primaryTextColor)
                                                 .font(.title2)
                                                 .fontWeight(.bold)
                                                 .multilineTextAlignment(.leading)
                                             
                                             HStack {
                                                 Text(item.type.rawValue)
-                                                    .foregroundColor(.gray)
+                                                    .foregroundColor(themeManager.secondaryTextColor)
                                                 Text("•")
-                                                    .foregroundColor(.gray)
+                                                    .foregroundColor(themeManager.secondaryTextColor)
                                                 Text(item.category.rawValue)
                                                     .foregroundColor(.red)
                                             }
@@ -111,9 +112,9 @@ struct RandomPickView: View {
                                                 Text("Why this recommendation:")
                                                     .font(.caption2)
                                                     .fontWeight(.semibold)
-                                                    .foregroundColor(.gray)
+                                                    .foregroundColor(themeManager.secondaryTextColor)
                                                 Text(reason)
-                                                    .foregroundColor(.gray)
+                                                    .foregroundColor(themeManager.secondaryTextColor)
                                                     .font(.caption)
                                                     .italic()
                                                     .fixedSize(horizontal: false, vertical: true)
@@ -129,10 +130,10 @@ struct RandomPickView: View {
                                             Text("Your notes:")
                                                 .font(.caption)
                                                 .fontWeight(.semibold)
-                                                .foregroundColor(.black)
+                                                .foregroundColor(themeManager.primaryTextColor)
                                             Text(item.notes)
                                                 .font(.body)
-                                                .foregroundColor(.gray)
+                                                .foregroundColor(themeManager.secondaryTextColor)
                                         }
                                     }
                                     
@@ -140,13 +141,13 @@ struct RandomPickView: View {
                                     Divider()
                                     HStack {
                                         Text("Added \(formattedDate(item.dateAdded))")
-                                            .foregroundColor(.gray)
+                                            .foregroundColor(themeManager.secondaryTextColor)
                                             .font(.caption)
                                         Spacer()
                                     }
                                 }
                                 .padding(20)
-                                .background(Color.gray.opacity(0.05))
+                                .background(themeManager.secondaryBackgroundColor)
                                 .cornerRadius(15)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 15)
@@ -206,11 +207,11 @@ struct RandomPickView: View {
                                 .font(.system(size: 80))
                             
                             Text("Nothing to recommend!")
-                                .foregroundColor(.black)
+                                .foregroundColor(themeManager.primaryTextColor)
                                 .font(.headline)
                             
                             Text("Add some items to your watchlist first, then come back for an AI recommendation.")
-                                .foregroundColor(.gray)
+                                .foregroundColor(themeManager.secondaryTextColor)
                                 .font(.body)
                                 .multilineTextAlignment(.center)
                                 .padding(.horizontal)
@@ -268,6 +269,7 @@ struct RandomPickView: View {
 struct MoodPickerView: View {
     @Binding var selectedMood: String?
     let onContinue: () -> Void
+    @EnvironmentObject var themeManager: ThemeManager
     
     var body: some View {
         VStack(spacing: 20) {
@@ -298,7 +300,7 @@ struct MoodPickerView: View {
                 Button("Skip (AI decides)") {
                     onContinue()  // Proceed without mood
                 }
-                .foregroundColor(.gray)
+                .foregroundColor(themeManager.secondaryTextColor)
             }
         }
         .padding(.horizontal)

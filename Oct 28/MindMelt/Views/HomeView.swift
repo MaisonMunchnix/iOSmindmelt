@@ -86,6 +86,7 @@ struct HomeView: View {
                                 items: watchlistManager.getQuickItems(),
                                 title: "Quick Watch"
                             )
+                            .environmentObject(themeManager)
                         }
                     }
                     
@@ -104,6 +105,7 @@ struct HomeView: View {
                                 items: watchlistManager.getBingeItems(),
                                 title: "Binge Ready"
                             )
+                            .environmentObject(themeManager)
                         }
                     }
                     
@@ -120,6 +122,7 @@ struct HomeView: View {
                     .sheet(isPresented: $showingRandomPick) {
                         NavigationView {
                             RandomPickView()
+                            .environmentObject(themeManager)
                         }
                     }
                 }

@@ -63,7 +63,8 @@ struct SidebarView: View {
                     ScrollView {
                         VStack(spacing: 0) {
                             // Account Settings
-                            NavigationLink(destination: AccountSettingsView()) {
+                            NavigationLink(destination: AccountSettingsView()
+                                .environmentObject(themeManager)) {
                                 SidebarNavigationItem(
                                     icon: "person.circle",
                                     title: "Account Settings"

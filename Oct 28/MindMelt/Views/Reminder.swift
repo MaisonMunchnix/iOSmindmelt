@@ -12,9 +12,10 @@ import SwiftUI
  
 struct Reminder : View{
     @State var fakebutton = false
+    @EnvironmentObject var themeManager: ThemeManager
     var body: some View{
         ZStack{
-            Color.black.ignoresSafeArea()
+            themeManager.backgroundColor.ignoresSafeArea()
             
             VStack{
                 HStack{
@@ -25,7 +26,7 @@ struct Reminder : View{
                             .frame(width:20, height: 30)
                         
                         Text("Set Reminder")
-                            .foregroundColor(.white)
+                            .foregroundColor(themeManager.primaryTextColor)
                             .fontWeight(.bold)
                     }
                     .padding()
@@ -47,7 +48,7 @@ struct Reminder : View{
                         .cornerRadius(20)
                     
                     Text("Google Firebase Studio in 23 minutes")
-                        .foregroundColor(.white)
+                        .foregroundColor(themeManager.primaryTextColor)
                         .fontWeight(.medium)
                     
                     
@@ -56,21 +57,21 @@ struct Reminder : View{
                 VStack{
                     HStack{
                         Text("Set Date")
-                            .foregroundColor(.white)
+                            .foregroundColor(themeManager.primaryTextColor)
                             .fontWeight(.semibold)
                         Spacer()
                         Image(systemName: "calendar")
-                            .foregroundColor(.white)
+                            .foregroundColor(themeManager.primaryTextColor)
                     }
                     .padding()
                     
                     HStack{
                         Text("Set Time")
-                            .foregroundColor(.white)
+                            .foregroundColor(themeManager.primaryTextColor)
                             .fontWeight(.semibold)
                         Spacer()
                         Image(systemName: "clock")
-                            .foregroundColor(.white)
+                            .foregroundColor(themeManager.primaryTextColor)
                     }
                     .padding()
                 }

@@ -16,7 +16,7 @@ struct FilteredListView: View {
     
     var body: some View {
         ZStack {
-            Color.white.ignoresSafeArea()
+            themeManager.backgroundColor.ignoresSafeArea()
             
             VStack {
                 if items.isEmpty {
@@ -26,14 +26,14 @@ struct FilteredListView: View {
                         
                         Image(systemName: "list.bullet")
                             .font(.system(size: 60))
-                            .foregroundColor(.gray)
+                            .foregroundColor(themeManager.secondaryTextColor)
                         
                         Text("No \(title.lowercased()) items")
-                            .foregroundColor(.black)
+                            .foregroundColor(themeManager.primaryTextColor)
                             .font(.headline)
                         
                         Text("Add some content to your watchlist and categorize it as '\(title)' to see it here!")
-                            .foregroundColor(.gray)
+                            .foregroundColor(themeManager.secondaryTextColor)
                             .font(.caption)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal)
@@ -62,7 +62,7 @@ struct FilteredListView: View {
                         HStack {
                             Text("\(items.count) item\(items.count == 1 ? "" : "s")")
                                 .font(.caption)
-                                .foregroundColor(.gray)
+                                .foregroundColor(themeManager.secondaryTextColor)
                             
                             Spacer()
                             
@@ -100,16 +100,16 @@ struct FilteredItemRow: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(item.title)
                     .font(.title3)
-                    .foregroundColor(.black)
+                    .foregroundColor(themeManager.primaryTextColor)
                     .lineLimit(2)
                 
                 HStack {
                     Text(item.type.rawValue)
                         .font(.caption)
-                        .foregroundColor(.gray)
+                        .foregroundColor(themeManager.secondaryTextColor)
                     
                     Text("•")
-                        .foregroundColor(.gray)
+                        .foregroundColor(themeManager.secondaryTextColor)
                     
                     Text(item.category.description)
                         .font(.caption)
@@ -117,7 +117,7 @@ struct FilteredItemRow: View {
                     
                     if !item.notes.isEmpty {
                         Text("•")
-                            .foregroundColor(.gray)
+                            .foregroundColor(themeManager.secondaryTextColor)
                         
                         Text("Has notes")
                             .font(.caption)
@@ -128,7 +128,7 @@ struct FilteredItemRow: View {
                 // Date added
                 Text("Added \(timeAgo(item.dateAdded))")
                     .font(.caption2)
-                    .foregroundColor(.gray)
+                    .foregroundColor(themeManager.secondaryTextColor)
             }
             
             Spacer()
@@ -143,11 +143,11 @@ struct FilteredItemRow: View {
             }
         }
         .padding()
-        .background(Color.gray.opacity(0.05))
+        .background(themeManager.cardBackgroundColor)
         .cornerRadius(12)
         .overlay(
             RoundedRectangle(cornerRadius: 12)
-                .stroke(Color.gray.opacity(0.2), lineWidth: 1)
+                .stroke(themeManager.borderColor, lineWidth: 1)
         )
     }
     

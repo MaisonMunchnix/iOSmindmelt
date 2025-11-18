@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AccountSettingsView: View {
     @StateObject private var supabase = SupabaseManager.shared
+    @EnvironmentObject var themeManager: ThemeManager
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -19,7 +20,7 @@ struct AccountSettingsView: View {
                         Text("Email")
                         Spacer()
                         Text(user.email ?? "N/A")
-                            .foregroundColor(.gray)
+                            .foregroundColor(themeManager.secondaryTextColor)
                     }
                 }
             }

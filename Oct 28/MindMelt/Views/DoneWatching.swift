@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DoneWatching: View {
     @EnvironmentObject var watchlistManager: WatchlistManager
+    @EnvironmentObject var themeManager: ThemeManager
     
     var watchedItems: [WatchlistItem] {
         watchlistManager.items.filter { $0.isWatched }
@@ -16,7 +17,7 @@ struct DoneWatching: View {
     
     var body: some View {
         ZStack {
-            Color.white.ignoresSafeArea()
+            themeManager.backgroundColor.ignoresSafeArea()
             
             VStack {
                 // Header
@@ -28,7 +29,7 @@ struct DoneWatching: View {
                             .frame(width: 30, height: 30)
                         
                         Text("Done Watching")
-                            .foregroundColor(.black)
+                            .foregroundColor(themeManager.primaryTextColor)
                             .fontWeight(.bold)
                     }
                     .padding()
@@ -46,7 +47,7 @@ struct DoneWatching: View {
                 
                 Divider()
                     .frame(height: 1)
-                    .foregroundColor(.black)
+                    .foregroundColor(themeManager.borderColor)
                 
                 // Content Area
                 if watchedItems.isEmpty {
@@ -56,15 +57,15 @@ struct DoneWatching: View {
                         
                         Image(systemName: "checkmark.circle")
                             .font(.system(size: 60))
-                            .foregroundColor(.gray)
+                            .foregroundColor(themeManager.secondaryTextColor)
                         
                         Text("No completed items")
-                            .foregroundColor(.black)
+                            .foregroundColor(themeManager.primaryTextColor)
                             .font(.headline)
                             .padding(.top)
                         
                         Text("Items you mark as watched will appear here")
-                            .foregroundColor(.gray)
+                            .foregroundColor(themeManager.secondaryTextColor)
                             .font(.caption)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal)
@@ -99,35 +100,36 @@ struct DoneWatching: View {
 struct WatchedItemRow: View {
     let item: WatchlistItem
     @EnvironmentObject var watchlistManager: WatchlistManager
+    @EnvironmentObject var themeManager: ThemeManager
     
     var body: some View {
         HStack {
             // Checkmark icon
             Image(systemName: "checkmark.circle.fill")
-                .foregroundColor(.gray)
+                .foregroundColor(themeManager.secondaryTextColor)
                 .frame(width: 30, height: 30)
             
             VStack(alignment: .leading, spacing: 4) {
                 Text(item.title)
                     .font(.title3)
-                    .foregroundColor(.black)
+                    .foregroundColor(themeManager.primaryTextColor)
                     .lineLimit(2)
                     .strikethrough() // Shows it's completed
                 
                 HStack {
                     Text(item.type.rawValue)
                         .font(.caption)
-                        .foregroundColor(.gray)
+                        .foregroundColor(themeManager.secondaryTextColor)
                     
                     Text("•")
-                        .foregroundColor(.gray)
+                        .foregroundColor(themeManager.secondaryTextColor)
                     
                     Text(item.category.rawValue)
                         .font(.caption)
                         .foregroundColor(.red)
                     
                     Text("•")
-                        .foregroundColor(.gray)
+                        .foregroundColor(themeManager.secondaryTextColor)
                     
                     Text("Watched")
                         .font(.caption)
@@ -137,14 +139,14 @@ struct WatchedItemRow: View {
                 if !item.notes.isEmpty {
                     Text(item.notes)
                         .font(.caption2)
-                        .foregroundColor(.gray)
+                        .foregroundColor(themeManager.secondaryTextColor)
                         .lineLimit(1)
                 }
                 
                 // Date watched (using dateAdded as proxy since we don't have dateWatched)
                 Text("Completed on \(formattedDate(item.dateAdded))")
                     .font(.caption2)
-                    .foregroundColor(.gray)
+                    .foregroundColor(themeManager.secondaryTextColor)
             }
             
             Spacer()
@@ -166,13 +168,13 @@ struct WatchedItemRow: View {
                 }
             } label: {
                 Image(systemName: "ellipsis.circle")
-                    .foregroundColor(.gray)
+                    .foregroundColor(themeManager.secondaryTextColor)
                     .font(.title2)
             }
 
         }
         .padding()
-        .background(Color.gray.opacity(0.1))
+        .background(themeManager.cardBackgroundColor)
         .cornerRadius(10)
     }
     

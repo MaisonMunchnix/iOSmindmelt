@@ -26,13 +26,14 @@ struct AddView: View {
     
     
     @EnvironmentObject var watchlistManager : WatchlistManager
+    @EnvironmentObject var themeManager: ThemeManager
     @Environment(\.dismiss) private var dismiss
     
     @State var fakebutton = false
     
     var body: some View {
         ZStack {
-            Color.white.ignoresSafeArea()
+            themeManager.backgroundColor.ignoresSafeArea()
             VStack(spacing: 20) {
                 HStack {
                     HStack {
@@ -42,7 +43,7 @@ struct AddView: View {
                             .frame(width: 30, height: 30)
                         
                         Text("Add New")
-                            .foregroundColor(.black)
+                            .foregroundColor(themeManager.primaryTextColor)
                             .fontWeight(.bold)
                     }
                     .padding()
@@ -75,7 +76,7 @@ struct AddView: View {
                         
                         VStack(alignment: .leading, spacing: 8) {
                             Text("Content Title")
-                                .foregroundColor(.black)
+                                .foregroundColor(themeManager.primaryTextColor)
                                 .fontWeight(.semibold)
                             
                             TextField("  Enter title ", text: $title)
@@ -87,7 +88,7 @@ struct AddView: View {
                         
                         VStack(alignment: .leading, spacing: 8) {
                             Text("Content Type")
-                                .foregroundColor(.black)
+                                .foregroundColor(themeManager.primaryTextColor)
                                 .fontWeight(.semibold)
                             
                             Picker("Type", selection: $selectedType) {
@@ -114,7 +115,7 @@ struct AddView: View {
                         
                         VStack(alignment: .leading, spacing: 8) {
                             Text("Notes (Optional)")
-                                .foregroundColor(.black)
+                                .foregroundColor(themeManager.primaryTextColor)
                                 .fontWeight(.semibold)
                             
                             TextField("  Add any notes..", text: $notes, axis: .vertical)
@@ -130,7 +131,7 @@ struct AddView: View {
                         VStack(alignment: .leading,  spacing: 12){
                             HStack{
                                 Text("Set Reminder")
-                                    .foregroundColor(.black)
+                                    .foregroundColor(themeManager.primaryTextColor)
                                     .fontWeight(.semibold)
                                 
                                 Spacer()
@@ -144,7 +145,7 @@ struct AddView: View {
                                 VStack(spacing:15){
                                     VStack(alignment: .leading,spacing: 8){
                                         Text("Reminder date and time")
-                                            .foregroundColor(.gray)
+                                            .foregroundColor(themeManager.secondaryTextColor)
                                             .font(.caption)
                                         
                                         DatePicker(
@@ -162,7 +163,7 @@ struct AddView: View {
                                     
                                     VStack(alignment: .leading, spacing: 8){
                                         Text("Quick Options")
-                                            .foregroundColor(.gray)
+                                            .foregroundColor(themeManager.secondaryTextColor)
                                             .font(.caption)
                                         
                                         ScrollView(.horizontal, showsIndicators: false){
@@ -189,7 +190,7 @@ struct AddView: View {
                                 
                                 VStack(alignment:.leading, spacing: 8){
                                     Text("Reminder Message (Optional)")
-                                        .foregroundColor(.gray)
+                                        .foregroundColor(themeManager.secondaryTextColor)
                                         .font(.caption)
                                     
                                     TextField("e.g., Recommended by a friend.", text: $reminderMessage)
@@ -209,7 +210,7 @@ struct AddView: View {
                                         VStack(alignment: .leading, spacing:2){
                                             Text("Reminder set for:")
                                                 .font(.caption)
-                                                .foregroundColor(.gray)
+                                                .foregroundColor(themeManager.secondaryTextColor)
                                             
                                             
                                             Text(formatReminderDate(reminderDate))
@@ -511,6 +512,7 @@ struct AddView: View {
     struct QuickReminderButton: View {
         let title: String
         let action: () -> Void
+        @EnvironmentObject var themeManager: ThemeManager
         
         var body: some View {
             Button(action: action){
